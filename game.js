@@ -53,9 +53,12 @@ function playRound(playerSelection, computerSelection) {
             return "Player did not make a selection"
     }
 }
-
-   
-
-  const playerSelection = "ROcK";
-  const computerSelection = getComputerChoice();
-  console.log(playRound(playerSelection, computerSelection));
+function game() {
+    console.log("ok we will play this game 5 times");
+    for (let i = 0; i < 5; i++) {
+        let playerSelection = prompt("What's your choice (Rock, paper or scissors)?");
+        console.log(playRound(playerSelection, getComputerChoice()));
+    }
+    console.log("we are done here");
+}
+game();
